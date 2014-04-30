@@ -25,8 +25,7 @@ $ocean = new \DigitalOceanApi\DigitalOcean('client_id_here','api_key_here');
 
 // DigitalOceanStatusMonitor class
 require_once('DigitalOceanStatusMonitor.class.php');
-//$monitor = new \DigitalOceanStatusMonitorNamespace\DigitalOceanStatusMonitor('ip_here','port_here', 'path_here', 'timeout_here', 'droplet_name_here');
-$monitor = new \DigitalOceanStatusMonitorNamespace\DigitalOceanStatusMonitor('dev.draghici.net', 80, '/do.php', 5);
+$monitor = new \DigitalOceanStatusMonitorNamespace\DigitalOceanStatusMonitor('ip_here','port_here', 'path_here', 'timeout_here', 'droplet_name_here');
 
 if ($monitor->check($ocean) == false) { echo 'Error'; }
 ?>
